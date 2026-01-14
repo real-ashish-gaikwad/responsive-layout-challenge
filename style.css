@@ -1,0 +1,209 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove animations for people who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1128px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/* hero */
+
+.hero {
+    width: 100%;
+    background-color: #F3EED9;
+    color: #824936;
+    min-height: 660px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #222C2A;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+}
+
+/* article */
+
+.article {
+   padding: 6em 0;
+   flex-direction: column;
+   align-items: center;
+}
+
+.article-title {
+    font-size: 1.5rem;
+    color: #824936;
+    margin-bottom: 3rem;
+}
+
+.article-desc {
+    color: #222C2A;
+    gap: 2rem;
+    font-size: 1rem;
+}
+
+/* demos */
+
+.demos {
+    width: 100%;
+}
+
+.demo {
+    width: 100%;
+    color: #fff;
+    padding: 3em 0;
+    gap: 1rem;
+}
+
+.demo-body {
+    width: 60%;
+    align-items: flex-start;
+}
+
+.demo-title {
+    color: #F3EED9;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.demo-desc {
+    font-size: 1rem;
+    /* width: 80%; */
+}
+
+.demo-img{
+    width: 40%;
+}
+
+.demo-img img {
+    border-radius: 5px;
+}
+
+.demo .row {
+    gap: 4rem;
+}
+
+.demo:nth-child(1) {
+    background-color: #222C2A;
+}
+
+.demo:nth-child(2) {
+    background-color: #824936;
+}
+
+@media (max-width: 740px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .article-desc {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .demo .row {
+        flex-direction: column;
+    }
+
+    .demo-body, .demo-img {
+        width: 100%;
+    }
+
+    .demo-img img {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .demo:nth-child(2) .row {
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+
+
