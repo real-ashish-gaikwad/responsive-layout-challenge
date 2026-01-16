@@ -176,10 +176,6 @@ select {
 }
 
 @media (max-width: 740px) {
-    .hero-title {
-        font-size: 3.5rem;
-    }
-
     .article-desc {
         flex-direction: column;
         text-align: center;
@@ -202,6 +198,7 @@ select {
         flex-direction: column-reverse;
     }
 }
+
 
 
 
